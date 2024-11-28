@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for the Flask app
 
 # Load the trained classification model (ensure the path is correct)
-model_failure = joblib.load('model/classification_model.pkl')  # Update the path to your model file
+model_failure = joblib.load('./model/classification_model.pkl')  # Update the path to your model file
 
 # Route to handle failure probability prediction (POST /predict)
 @app.route('/predict', methods=['POST'])
